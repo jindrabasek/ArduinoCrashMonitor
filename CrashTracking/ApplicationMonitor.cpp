@@ -123,7 +123,7 @@ void CApplicationMonitor::WatchdogInterruptHandler(uint8_t *puProgramAddress)
   // If the watch dog timeout is too short, it doesn't
   // give the program much time to reset it before the
   // next timeout. So we can be a bit generous here. 
-  wdt_enable(WDTO_120MS);
+  wdt_enable(WDTO_2S);
   while (true)
     ;
 }

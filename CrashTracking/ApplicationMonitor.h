@@ -6,6 +6,9 @@
 ** ************************************************************************************************ */
 
 #pragma once
+#ifndef APPLICATION_MONITOR_h
+#define APPLICATION_MONITOR_h
+
 #include <Arduino.h>
 #include <avr/wdt.h>
 
@@ -100,3 +103,5 @@ namespace Watchdog
 }
 
 extern Watchdog::CApplicationMonitor ApplicationMonitor;
+
+#endif
