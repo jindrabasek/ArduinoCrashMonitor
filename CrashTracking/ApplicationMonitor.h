@@ -102,6 +102,7 @@ namespace Watchdog
 
 }
 
+extern Watchdog::CApplicationMonitorHeader Header;
 extern Watchdog::CApplicationMonitor ApplicationMonitor;
 
 #endif

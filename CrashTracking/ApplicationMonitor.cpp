@@ -105,8 +105,6 @@ void CApplicationMonitor::PrintValue(Print &rDestination, const __FlashStringHel
 
 void CApplicationMonitor::WatchdogInterruptHandler(uint8_t *puProgramAddress)
 {
-  CApplicationMonitorHeader Header;
-
   LoadHeader(Header);
   memcpy(m_CrashReport.m_auAddress, puProgramAddress, PROGRAM_COUNTER_SIZE);
   SaveCurrentReport(Header.m_uNextReport);
@@ -188,3 +186,4 @@ void CApplicationMonitor::WriteBlock(int nBaseAddress, const void *pData, uint8_
     eeprom_write_byte((uint8_t *)nBaseAddress++, *puData++);
 }
 
+Watchdog::CApplicationMonitorHeader Header;
